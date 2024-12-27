@@ -157,7 +157,7 @@ const BankingInterface = () => {
                 </div>
 
                 {/* Bottom Navigation */}
-                <div className="fixed bottom-0 left-0 right-0 bg-white border-t py-2">
+                <div className="fixed bottom-0 left-0 right-0 bg-white border-t py-3 pb-6 ">
                     <div className="flex justify-around">
                         <button className="flex flex-col items-center text-customBlue">
                             <CreditCard size={20} />
