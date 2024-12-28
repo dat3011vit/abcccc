@@ -8,6 +8,7 @@ import {
   Landmark,
   Star,
   //   Calendar,
+  SlidersHorizontal,
 } from "lucide-react";
 import bmoLogo from "../assets/logo.png"; // Sửa lại đường dẫn theo cấu trúc thư mục của bạn
 import TransactionList from "./TransactionList";
@@ -133,40 +134,41 @@ const BankingInterface = () => {
         <div className="mb-20">
           {/* {" "} */}
           {/* Added margin bottom for fixed navigation */}
-
-          <div className="bg-white  shadow-md p-0 pb-1 rounded-md">
+          <div>
             <div className="flex justify-start gap mb-4">
               {/* Button: Transactions */}
-              <button className="flex-1 bg-customBlue text-white border border-customBlue p-5 text-center shadow-sm font-medium">
+              <button className="flex-1 bg-customBlue text-white border border-customBlue p-5 text-center shadow-sm font-medium transform scale-110">
                 Transactions
               </button>
 
               {/* Button: Account Details */}
-              <button className="flex-1 bg-white  text-[grey] border border-gray-300  p-5 text-center shadow-sm font-medium">
+              <button className="flex-1 bg-white text-[grey] border border-gray-300 p-5 text-center shadow-sm text-sm font-medium">
                 Account details
               </button>
             </div>
             {/* Filter Button */}
             <div>
-              <button className="flex  items-center text-customBlue border border-customBlue rounded-lg p-2 px-4 shadow-sm mb-3 font-bold">
-                <FileText size={20} className="mr-2 " />
+              <button className="flex items-center text-customBlue border border-customBlue bg-[#e3fbfd] rounded-lg p-2 px-4 shadow-sm mb-3 font-bold absolute left-0 ">
+                <SlidersHorizontal size={20} className="mr-2" />
                 FILTER
               </button>
             </div>
             {/* Transaction Items */}
           </div>
-          <TransactionList />
+          <div className="mt-20">
+            <TransactionList />
+          </div>{" "}
         </div>
         {/* Bottom Navigation */}
         <div className="fixed bottom-0 left-0 right-0 bg-white border-t py-3 pb-6 ">
-          <div className="flex justify-center gap-6">
+          <div className="flex justify-center gap-4">
             {" "}
             {/* Thay justify-around bằng justify-center và thêm gap */}
-            <button className="flex flex-col items-center text-customBlue font-semibold">
+            <button className="flex flex-col items-center text-customBlue font-semibold mr-2">
               <CreditCard size={23} className="text-customBlue" />
               <span className="text-sm">Accounts</span>
             </button>
-            <button className="flex flex-col items-center text-gray-500 font-semibold">
+            <button className="flex flex-col items-center text-gray-500 font-semibold ">
               <CircleDollarSign size={23} className="text-gray-500" />
               <span className="text-sm">Pay & Transfer</span>
             </button>
@@ -174,7 +176,7 @@ const BankingInterface = () => {
               <Landmark size={23} className="text-gray-500" />
               <span className="text-sm">Bank services</span>
             </button>
-            <button className="flex flex-col items-center text-gray-500 font-semibold">
+            <button className="flex flex-col items-center text-gray-500 font-semibold ml-2">
               <Star size={23} className="text-gray-500" />
               <span className="text-sm">Offers</span>
             </button>
