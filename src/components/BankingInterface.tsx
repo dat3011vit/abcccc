@@ -82,7 +82,7 @@ const BankingInterface = () => {
         <h1 className="text-3xl font-medium mb-6">$251,199.75</h1>
         {/* Action Buttons */}
         <div
-          className="grid grid-cols-3 gap-4 mb-6 px-4 py-2 pt-4 rounded overflow-x-auto"
+          className="grid grid-cols-3 gap-4 mb-4 px-4 py-2 pt-4 rounded overflow-x-auto"
           style={{ backgroundColor: "rgb(245 246 248)" }}
         >
           <div className="flex justify-center">
@@ -106,7 +106,7 @@ const BankingInterface = () => {
             <button className="flex flex-col items-center text-customBlue">
               <FileText className="mb-1" size={28} strokeWidth={2} />{" "}
               {/* Tăng size và độ dày của icon */}
-              <span className="text-sm mt-2 font-medium">PAY BILL</span>{" "}
+              <span className="text-sm mt-3 font-medium">PAY BILL</span>{" "}
               {/* Thêm font-medium */}
             </button>
           </div>
@@ -115,7 +115,7 @@ const BankingInterface = () => {
             <button className="flex flex-col items-center text-customBlue">
               <Settings className="mb-1" size={28} strokeWidth={2} />{" "}
               {/* Tăng size và độ dày của icon */}
-              <span className="text-sm mt-2 font-medium">MANAGE</span>{" "}
+              <span className="text-sm mt-3 font-medium">MANAGE</span>{" "}
               {/* Thêm font-medium */}
             </button>
           </div>
