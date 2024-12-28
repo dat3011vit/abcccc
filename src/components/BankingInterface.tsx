@@ -79,7 +79,7 @@ const BankingInterface = () => {
         {" "}
         <h2 className="text-xl font-semibold mb-2">Hey Money Corp</h2>
         <p className="text-gray-600 mb-1">Primary Business Chequing Account</p>
-        <p className="text-gray-600 mb-4">4846580008 </p>
+        <p className="text-gray-600 mb-4">484 658 0008 </p>
         <h1 className="text-3xl font-medium mb-6">$133,625.00</h1>
         {/* Action Buttons */}
         <div
