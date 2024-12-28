@@ -1,16 +1,28 @@
 import { ChevronRight } from "lucide-react";
 
 type Transaction = {
-  description: string;
-  amount: string;
-  balance?: string;
-};
+    description: string;
+    amount: string;
+    balance?: string;
+    isPending?: boolean;
+  };
 
 type GroupedTransactions = {
   [date: string]: Transaction[];
 };
 
 const groupedTransactions: GroupedTransactions = {
+
+    "PENDING": [
+    {
+      description: "Wire Transfer Received",
+      amount: "+$20,030.00",
+      balance: "DEC 28, 2024",
+      isPending: true
+
+
+    },
+  ],
   "DEC 28, 2024": [
     {
       description: "Conference registration fee - Financial Summit",
@@ -135,50 +147,55 @@ const groupedTransactions: GroupedTransactions = {
 };
 
 const TransactionList = () => {
-  return (
-    <div className="space-y-8">
-      {Object.entries(groupedTransactions).map(
-        ([date, transactions]: [string, Transaction[]]) => (
-          <div key={date}>
-            <p
-              className="text-gray-600 font-medium mb-0 bg-customGrey px-4 py-0 -mx-4 rounded mt-8"
-              style={{ backgroundColor: "#f5f6f8" }}
-            >
-              {date}
-            </p>
-            <div className="space-y-0">
-              {transactions.map((transaction: Transaction, index: number) => (
-                <div
-                  key={index}
-                  className="-mx-4 flex justify-between items-center border-b pb-3 pt-3 bg-white text-black px-4"
-                  style={{ border: "1px solid #ddd" }}
-                >
-                  <div className="flex-grow">
-                    <p className="font-medium">{transaction.description}</p>
-                    <p className="text-gray-500 text-sm">
-                      {transaction.balance}
-                    </p>
+    return (
+      <div className="space-y-8">
+        {Object.entries(groupedTransactions).map(
+          ([date, transactions]: [string, Transaction[]]) => (
+            <div key={date}>
+              <p
+                className="text-gray-600 font-medium mb-0 bg-customGrey px-4 py-0 -mx-4 rounded mt-8"
+                style={{ backgroundColor: "#f5f6f8" }}
+              >
+                {date}
+              </p>
+              <div className="space-y-0">
+                {transactions.map((transaction: Transaction, index: number) => (
+                  <div
+                    key={index}
+                    className="-mx-4 flex justify-between items-center border-b pb-3 pt-3 bg-white text-black px-4"
+                    style={{ border: "1px solid #ddd" }}
+                  >
+                    <div className="flex-grow">
+                      <p className="font-medium">{transaction.description}</p>
+                      <div className="flex items-center gap-2 text-gray-500 text-sm">
+                        {transaction.isPending && (
+                          <span className="bg-customBlue text-white font-bold mt-1 text-sm px-3 py-0">
+                            PENDING
+                          </span>
+                        )}
+                        <span>{transaction.balance}</span>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <p
+                        className={`${
+                          transaction.amount.startsWith("+")
+                            ? "text-green-500"
+                            : "text-gray-500"
+                        } font-medium whitespace-nowrap`}
+                      >
+                        {transaction.amount}
+                      </p>
+                      <ChevronRight className="text-customBlue" size={26} />
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <p
-                      className={`${
-                        transaction.amount.startsWith("+")
-                          ? "text-green-500"
-                          : "text-gray-500"
-                      } font-medium whitespace-nowrap`}
-                    >
-                      {transaction.amount}
-                    </p>
-                    <ChevronRight className="text-customBlue" size={26} />
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
-        )
-      )}
-    </div>
-  );
-};
+          )
+        )}
+      </div>
+    );
+  };
 
 export default TransactionList;
