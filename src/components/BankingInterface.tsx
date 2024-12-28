@@ -74,7 +74,7 @@ const BankingInterface = () => {
             </div> */}
 
       {/* Account Section */}
-      <div className="p-4 rounded" style={{ backgroundColor: "#f5f6f8" }}>
+      <div className="p-4 pt-40 rounded" style={{ backgroundColor: "#f5f6f8" }}>
         {" "}
         <h2 className="text-xl font-semibold mb-2">Business Account</h2>
         <p className="text-gray-600 mb-1">Primary Business Chequing Account</p>
