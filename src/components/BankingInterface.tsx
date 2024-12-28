@@ -78,9 +78,9 @@ const BankingInterface = () => {
       <div className="p-4 pt-40 rounded" style={{ backgroundColor: "#f5f6f8" }}>
         {" "}
         <h2 className="text-xl font-semibold mb-2">Hey Money Corp</h2>
-        <p className="text-gray-600 mb-1">Primary Business Chequing Account</p>
-        <p className="text-gray-600 mb-4">484 658 0008 </p>
-        <h1 className="text-3xl font-medium mb-6">$133,625.00</h1>
+        <p className="text-gray-600 mb-1">BMO Simple Business</p>
+        <p className="text-gray-600 mb-4">Checking*0008</p>
+        <h1 className="text-3xl font-light mt-5 mb-6">$133,625.00</h1>
         {/* Action Buttons */}
         <div
           className="grid grid-cols-3 gap-4 mb-4 px-4 py-2 pt-4 rounded overflow-x-auto"
