@@ -132,7 +132,7 @@ const TransactionList = () => {
                         transaction.amount.startsWith("+")
                           ? "text-green-500"
                           : "text-gray-500"
-                      } font-medium`}
+                      } font-medium whitespace-nowrap`}
                     >
                       {transaction.amount}
                     </p>

@@ -78,7 +78,7 @@ const BankingInterface = () => {
         {" "}
         <h2 className="text-xl font-semibold mb-2">Business Account</h2>
         <p className="text-gray-600 mb-1">Primary Business Chequing Account</p>
-        <p className="text-gray-600 mb-4">1 (415) 555-1234</p>
+        <p className="text-gray-600 mb-4">1 (415) 555-2715</p>
         <h1 className="text-3xl font-medium mb-6">$251,199.75</h1>
         {/* Action Buttons */}
         <div
@@ -163,19 +163,19 @@ const BankingInterface = () => {
             {" "}
             {/* Thay justify-around bằng justify-center và thêm gap */}
             <button className="flex flex-col items-center text-customBlue font-semibold">
-              <CreditCard size={24} className="text-customBlue" />
+              <CreditCard size={23} className="text-customBlue" />
               <span className="text-sm">Accounts</span>
             </button>
             <button className="flex flex-col items-center text-gray-500 font-semibold">
-              <CircleDollarSign size={24} className="text-gray-500" />
+              <CircleDollarSign size={23} className="text-gray-500" />
               <span className="text-sm">Pay & Transfer</span>
             </button>
             <button className="flex flex-col items-center text-gray-500 font-semibold">
-              <Landmark size={24} className="text-gray-500" />
+              <Landmark size={23} className="text-gray-500" />
               <span className="text-sm">Bank services</span>
             </button>
             <button className="flex flex-col items-center text-gray-500 font-semibold">
-              <Star size={24} className="text-gray-500" />
+              <Star size={23} className="text-gray-500" />
               <span className="text-sm">Offers</span>
             </button>
           </div>
