@@ -7,7 +7,7 @@ import {
   Send,
   Landmark,
   Star,
-  //   Calendar,
+    Calendar,
   SlidersHorizontal,
 } from "lucide-react";
 import bmoLogo from "../assets/logo.png"; // Sửa lại đường dẫn theo cấu trúc thư mục của bạn
@@ -16,22 +16,22 @@ import zelleLogo from "../assets/zelle-logo.png"; // Import ảnh
 import StickyHeader from "./StickyHeader";
 
 const BankingInterface = () => {
-  // Get current date
-  //   const today = new Date();
-  //   const dateOptions: Intl.DateTimeFormatOptions = {
-  //     weekday: "long",
-  //     year: "numeric",
-  //     month: "long",
-  //     day: "numeric",
-  //   };
-  //   const formattedDate = today.toLocaleDateString("en-US", dateOptions);
+//   Get current date
+    const today = new Date();
+    const dateOptions: Intl.DateTimeFormatOptions = {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    };
+    const formattedDate = today.toLocaleDateString("en-US", dateOptions);
 
   return (
     <div className="max-w-md mx-auto min-h-screen">
       <StickyHeader bmoLogo={bmoLogo} />
 
       {/* Welcome Section */}
-      {/* <div
+      <div
         className="text-white p-4 pb-8 rounded-b-2xl"
         style={{ backgroundColor: "#0079C2" }}
       >
@@ -40,7 +40,7 @@ const BankingInterface = () => {
           <Calendar size={16} className="mr-2" />
           <span>Today is {formattedDate}</span>
         </div>
-      </div> */}
+      </div>
 
       {/* Quick Actions Section
             <div className="px-4 -mt-6 relative z-10">
@@ -77,9 +77,9 @@ const BankingInterface = () => {
       {/* Account Section */}
       <div className="p-4 pt-40 rounded" style={{ backgroundColor: "#f5f6f8" }}>
         {" "}
-        <h2 className="text-xl font-semibold mb-2">Business Account</h2>
+        <h2 className="text-xl font-semibold mb-2">Hey Money Corp</h2>
         <p className="text-gray-600 mb-1">Primary Business Chequing Account</p>
-        <p className="text-gray-600 mb-4">1 (415) 555-2715</p>
+        <p className="text-gray-600 mb-4">4846580008 </p>
         <h1 className="text-3xl font-medium mb-6">$133,625.00</h1>
         {/* Action Buttons */}
         <div
