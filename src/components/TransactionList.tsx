@@ -96,6 +96,42 @@ const groupedTransactions: GroupedTransactions = {
       balance: "$111,336.70",
     },
   ],
+  "DEC 23, 2024": [
+    {
+      description: "Corporate insurance premium payment",
+      amount: "-$12,500.00",
+      balance: "$98,836.70"
+    },
+    {
+      description: "Client account transfer",
+      amount: "-$13,120.00",
+      balance: "$111,336.70"
+    }
+  ],
+  "DEC 22, 2024": [
+    {
+      description: "Corporate insurance premium payment",
+      amount: "-$12,500.00",
+      balance: "$98,836.70"
+    },
+    {
+      description: "Client account transfer",
+      amount: "-$13,120.00",
+      balance: "$111,336.70"
+    }
+  ],
+  "DEC 21, 2024": [
+    {
+      description: "Corporate insurance premium payment",
+      amount: "-$12,500.00",
+      balance: "$98,836.70"
+    },
+    {
+      description: "Client account transfer",
+      amount: "-$13,120.00",
+      balance: "$111,336.70"
+    }
+  ]
 };
 
 const TransactionList = () => {
