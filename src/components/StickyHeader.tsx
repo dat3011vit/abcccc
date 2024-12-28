@@ -15,7 +15,7 @@ const StickyHeader: React.FC<StickyHeaderProps> = ({ bmoLogo }) => {
       }}
     >
       <div className="flex justify-between items-center px-4 py-3 pb-5">
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 p-1 ml-1">
           <ArrowLeft size={28} className="text-white" />
           <img src={bmoLogo} alt="BMO Logo" className="h-8 w-auto" />
         </div>
