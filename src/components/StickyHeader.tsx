@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowLeft , Gift, Mail } from 'lucide-react';
+import { ArrowLeft , Gift, UserRound , ShieldQuestion  } from 'lucide-react';
 
 interface StickyHeaderProps {
   bmoLogo: string; 
@@ -16,9 +16,11 @@ const StickyHeader: React.FC<StickyHeaderProps> = ({ bmoLogo }) => {
           <ArrowLeft  size={24} className="text-white" />
           <img src={bmoLogo} alt="BMO Logo" className="h-8 w-auto" />
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-6">
           <Gift size={24} className="text-white" />
-          <Mail size={24} className="text-white" />
+          <ShieldQuestion   size={24} className="text-white" />
+          <UserRound  size={24} className="text-white" />
+
         </div>
       </div>
     </div>
