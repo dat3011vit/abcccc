@@ -15,7 +15,7 @@ const groupedTransactions: GroupedTransactions = {
 
     "PENDING": [
     {
-      description: "Wire Transfer Received",
+      description: "Incoming Wire",
       amount: "+$20,030.00",
       balance: "DEC 28, 2024",
       isPending: true
