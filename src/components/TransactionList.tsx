@@ -22,14 +22,6 @@ const groupedTransactions: GroupedTransactions = {
   ],
 
 
-  "DEC 30, 2024": [   
-    {
-      description: "Final invoice payment - Vendor services",
-      amount: "-$4,200.00",
-      balance: "$143,925.00",
-    },
-  ],
-
   "DEC 28, 2024": [   
     {
       description: "DDA DEBIT",
@@ -37,7 +29,7 @@ const groupedTransactions: GroupedTransactions = {
       balance: "$148,125.00",
     },
     {
-      description: "FED WIRE TRANSFER CREDIT 2412276WIRE-IN",
+      description: "Incoming Wire",
       amount: "+$20,000.00",
       balance: "$153,625.00",
     },
