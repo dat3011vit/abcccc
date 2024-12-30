@@ -12,18 +12,47 @@ type GroupedTransactions = {
 };
 
 const groupedTransactions: GroupedTransactions = {
-
     "PENDING": [
     {
-      description: "Incoming Wire",
-      amount: "+$20,030.00",
-      balance: "DEC 28, 2024",
+      description: "DDA CHECK",
+      amount: "-$5,000.00",
+      balance: "DEC 30, 2024",
       isPending: true
-
-
     },
   ],
-  "DEC 28, 2024": [
+
+  "DEC 30, 2024": [   
+    {
+      description: "Purchase of office furniture for new branch",
+      amount: "-$7,500.00",
+      balance: "$130,925.00",
+    },
+  ],
+
+  "DEC 29, 2024": [   
+    {
+      description: "DDA DEBIT",
+      amount: "-$5,500.00",
+      balance: "$138,425.00",
+    },
+    {
+      description: "Final invoice payment - Vendor services",
+      amount: "-$4,200.00",
+      balance: "$143,925.00",
+    },
+  ],
+
+  "DEC 28, 2024": [   
+    {
+      description: "DDA DEBIT",
+      amount: "-$5,500.00",
+      balance: "$148,125.00",
+    },
+    {
+      description: "FED WIRE TRANSFER CREDIT 2412276WIRE-IN",
+      amount: "+$20,000.00",
+      balance: "$153,625.00",
+    },
     {
       description: "Conference registration fee - Financial Summit",
       amount: "-$1,200.00",
