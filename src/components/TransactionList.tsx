@@ -21,20 +21,8 @@ const groupedTransactions: GroupedTransactions = {
     },
   ],
 
-  "DEC 30, 2024": [   
-    {
-      description: "Purchase of office furniture for new branch",
-      amount: "-$7,500.00",
-      balance: "$130,925.00",
-    },
-  ],
 
-  "DEC 29, 2024": [   
-    {
-      description: "DDA DEBIT",
-      amount: "-$5,500.00",
-      balance: "$138,425.00",
-    },
+  "DEC 30, 2024": [   
     {
       description: "Final invoice payment - Vendor services",
       amount: "-$4,200.00",
