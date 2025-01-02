@@ -1,28 +1,50 @@
 import { ChevronRight } from "lucide-react";
 
 type Transaction = {
-    description: string;
-    amount: string;
-    balance?: string;
-    isPending?: boolean;
-  };
+  description: string;
+  amount: string;
+  balance?: string;
+  isPending?: boolean;
+};
 
 type GroupedTransactions = {
   [date: string]: Transaction[];
 };
 
 const groupedTransactions: GroupedTransactions = {
-    "PENDING": [
+
+
+  "JAN 01, 2025": [
     {
-      description: "DDA CHECK",
-      amount: "-$5,000.00",
-      balance: "DEC 30, 2024",
-      isPending: true
+      "description": "Payroll distribution",
+      "amount": "-$4,000.00",
+      "balance": "$108,225.00"
     },
   ],
 
 
-  "DEC 28, 2024": [   
+  "DEC 31, 2024": [
+    {
+      description: "End-of-year tax payment",
+      amount: "-$20,150.00",
+      balance: "$112,225.00",
+    },
+  ],
+
+  "DEC 29, 2024": [
+    {
+      description: "Client account settlement",
+      amount: "-$10,750.00",
+      balance: "$132,375.00",
+    },
+    {
+      description: "DDA CHECK",
+      amount: "-$5,000.00",
+      balance: "$143,125.00",
+    },
+  ],
+
+  "DEC 28, 2024": [
     {
       description: "DDA DEBIT",
       amount: "-$5,500.00",
@@ -121,90 +143,90 @@ const groupedTransactions: GroupedTransactions = {
     {
       description: "Corporate insurance premium payment",
       amount: "-$12,500.00",
-      balance: "$98,836.70"
+      balance: "$98,836.70",
     },
     {
       description: "Client account transfer",
       amount: "-$13,120.00",
-      balance: "$111,336.70"
-    }
+      balance: "$111,336.70",
+    },
   ],
   "DEC 22, 2024": [
     {
       description: "Corporate insurance premium payment",
       amount: "-$12,500.00",
-      balance: "$98,836.70"
+      balance: "$98,836.70",
     },
     {
       description: "Client account transfer",
       amount: "-$13,120.00",
-      balance: "$111,336.70"
-    }
+      balance: "$111,336.70",
+    },
   ],
   "DEC 21, 2024": [
     {
       description: "Corporate insurance premium payment",
       amount: "-$12,500.00",
-      balance: "$98,836.70"
+      balance: "$98,836.70",
     },
     {
       description: "Client account transfer",
       amount: "-$13,120.00",
-      balance: "$111,336.70"
-    }
-  ]
+      balance: "$111,336.70",
+    },
+  ],
 };
 
 const TransactionList = () => {
-    return (
-      <div className="space-y-8">
-        {Object.entries(groupedTransactions).map(
-          ([date, transactions]: [string, Transaction[]]) => (
-            <div key={date}>
-              <p
-                className="text-gray-600 font-medium mb-0 bg-customGrey px-4 py-0 -mx-4 rounded mt-8"
-                style={{ backgroundColor: "#f5f6f8" }}
-              >
-                {date}
-              </p>
-              <div className="space-y-0">
-                {transactions.map((transaction: Transaction, index: number) => (
-                  <div
-                    key={index}
-                    className="-mx-4 flex justify-between items-center border-b pb-3 pt-3 bg-white text-black px-4"
-                    style={{ border: "1px solid #ddd" }}
-                  >
-                    <div className="flex-grow">
-                      <p className="font-medium">{transaction.description}</p>
-                      <div className="flex items-center gap-2 text-gray-500 text-sm">
-                        {transaction.isPending && (
-                          <span className="bg-customBlue text-white font-bold mt-1 text-sm px-3 py-0">
-                            PENDING
-                          </span>
-                        )}
-                        <span>{transaction.balance}</span>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <p
-                        className={`${
-                          transaction.amount.startsWith("+")
-                            ? "text-green-500"
-                            : "text-gray-500"
-                        } font-medium whitespace-nowrap`}
-                      >
-                        {transaction.amount}
-                      </p>
-                      <ChevronRight className="text-customBlue" size={26} />
+  return (
+    <div className="space-y-8">
+      {Object.entries(groupedTransactions).map(
+        ([date, transactions]: [string, Transaction[]]) => (
+          <div key={date}>
+            <p
+              className="text-gray-600 font-medium mb-0 bg-customGrey px-4 py-0 -mx-4 rounded mt-8"
+              style={{ backgroundColor: "#f5f6f8" }}
+            >
+              {date}
+            </p>
+            <div className="space-y-0">
+              {transactions.map((transaction: Transaction, index: number) => (
+                <div
+                  key={index}
+                  className="-mx-4 flex justify-between items-center border-b pb-3 pt-3 bg-white text-black px-4"
+                  style={{ border: "1px solid #ddd" }}
+                >
+                  <div className="flex-grow">
+                    <p className="font-medium">{transaction.description}</p>
+                    <div className="flex items-center gap-2 text-gray-500 text-sm">
+                      {transaction.isPending && (
+                        <span className="bg-customBlue text-white font-bold mt-1 text-sm px-3 py-0">
+                          PENDING
+                        </span>
+                      )}
+                      <span>{transaction.balance}</span>
                     </div>
                   </div>
-                ))}
-              </div>
+                  <div className="flex items-center gap-2">
+                    <p
+                      className={`${
+                        transaction.amount.startsWith("+")
+                          ? "text-green-500"
+                          : "text-gray-500"
+                      } font-medium whitespace-nowrap`}
+                    >
+                      {transaction.amount}
+                    </p>
+                    <ChevronRight className="text-customBlue" size={26} />
+                  </div>
+                </div>
+              ))}
             </div>
-          )
-        )}
-      </div>
-    );
-  };
+          </div>
+        )
+      )}
+    </div>
+  );
+};
 
 export default TransactionList;
