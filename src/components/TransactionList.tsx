@@ -12,16 +12,52 @@ type GroupedTransactions = {
 };
 
 const groupedTransactions: GroupedTransactions = {
-
-
-  "JAN 01, 2025": [
+  "JAN 04, 2025": [
     {
-      "description": "Payroll distribution",
-      "amount": "-$4,000.00",
-      "balance": "$108,225.00"
+      description: "Payment for business analysis tools",
+      amount: "-$2,200.00",
+      balance: "$112,225.00",
+    },
+    {
+      description: "Marketing campaign expense",
+      amount: "-$4,800.00",
+      balance: "$114,425.00",
     },
   ],
 
+  "JAN 03, 2025": [
+    {
+      description: "Consulting project payment received",
+      amount: "+$8,750.00",
+      balance: "$119,225.00",
+    },
+    {
+      description: "Payment for annual software subscription",
+      amount: "-$3,250.00",
+      balance: "$110,475.00",
+    },
+  ],
+
+  "JAN 02, 2025": [
+    {
+      description: "Client consultation fee received",
+      amount: "+$12,000.00",
+      balance: "$113,725.00",
+    },
+    {
+      description: "Monthly office rent payment",
+      amount: "-$6,500.00",
+      balance: "$101,725.00",
+    },
+  ],
+
+  "JAN 01, 2025": [
+    {
+      description: "Payroll distribution",
+      amount: "-$4,000.00",
+      balance: "$108,225.00",
+    },
+  ],
 
   "DEC 31, 2024": [
     {

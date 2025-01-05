@@ -15,6 +15,21 @@ import TransactionList from "./TransactionList";
 import zelleLogo from "../assets/zelle-logo.png"; // Import ảnh
 import StickyHeader from "./StickyHeader";
 
+
+const footerStyles: React.CSSProperties = {
+  position: "fixed", // Chuỗi hợp lệ
+  bottom: 0, // Số hợp lệ
+  left: 0, // Số hợp lệ
+  right: 0, // Số hợp lệ
+  background: "white", // Chuỗi hợp lệ
+  borderTop: "1px solid #ddd", // Chuỗi hợp lệ
+  paddingTop: "12px", // Chuỗi hợp lệ
+  paddingBottom: "24px", // Chuỗi hợp lệ
+  zIndex: 1000, // Số hợp lệ
+};
+
+
+
 const BankingInterface = () => {
 //   Get current date
     const today = new Date();
@@ -80,7 +95,7 @@ const BankingInterface = () => {
         <h2 className="text-xl font-semibold mb-2">Hey Money Corp</h2>
         <p className="text-gray-600 mb-1">BMO Simple Business</p>
         <p className="text-gray-600 mb-4">Checking*0008</p>
-        <h1 className="text-3xl font-light mt-5 mb-6">$108,225.00</h1>
+        <h1 className="text-3xl font-light mt-5 mb-6">$112,225.00</h1>
         {/* Action Buttons */}
         <div
           className="grid grid-cols-3 gap-4 mb-4 px-4 py-2 pt-4 rounded overflow-x-auto"
@@ -160,28 +175,26 @@ const BankingInterface = () => {
           </div>{" "}
         </div>
         {/* Bottom Navigation */}
-        <div className="fixed bottom-0 left-0 right-0 bg-white border-t py-3 pb-6 ">
-          <div className="flex justify-center gap-4">
-            {" "}
-            {/* Thay justify-around bằng justify-center và thêm gap */}
-            <button className="flex flex-col items-center text-customBlue font-semibold mr-2">
-              <CreditCard size={23} className="text-customBlue" />
-              <span className="text-sm">Accounts</span>
-            </button>
-            <button className="flex flex-col items-center text-gray-500 font-semibold ">
-              <CircleDollarSign size={23} className="text-gray-500" />
-              <span className="text-sm">Pay & Transfer</span>
-            </button>
-            <button className="flex flex-col items-center text-gray-500 font-semibold">
-              <Landmark size={23} className="text-gray-500" />
-              <span className="text-sm">Bank services</span>
-            </button>
-            <button className="flex flex-col items-center text-gray-500 font-semibold ml-2">
-              <Star size={23} className="text-gray-500" />
-              <span className="text-sm">Offers</span>
-            </button>
-          </div>
-        </div>
+        <div style={footerStyles} className="fixed bottom-0 left-0 right-0 bg-white border-t py-3 pb-6">
+  <div className="flex justify-center gap-4">
+    <button className="flex flex-col items-center text-customBlue font-semibold mr-2">
+      <CreditCard size={23} className="text-customBlue" />
+      <span className="text-sm">Accounts</span>
+    </button>
+    <button className="flex flex-col items-center text-gray-500 font-semibold">
+      <CircleDollarSign size={23} className="text-gray-500" />
+      <span className="text-sm">Pay & Transfer</span>
+    </button>
+    <button className="flex flex-col items-center text-gray-500 font-semibold">
+      <Landmark size={23} className="text-gray-500" />
+      <span className="text-sm">Bank services</span>
+    </button>
+    <button className="flex flex-col items-center text-gray-500 font-semibold ml-2">
+      <Star size={23} className="text-gray-500" />
+      <span className="text-sm">Offers</span>
+    </button>
+  </div>
+</div>
       </div>
     </div>
   );
