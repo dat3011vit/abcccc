@@ -27,7 +27,7 @@ const groupedTransactions: GroupedTransactions = {
 
   "JAN 03, 2025": [
     {
-      description: "Consulting project payment received",
+      description: "Consulting project payment",
       amount: "+$8,750.00",
       balance: "$119,225.00",
     },
